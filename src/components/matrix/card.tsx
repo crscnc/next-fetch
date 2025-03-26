@@ -1,10 +1,10 @@
-// Card.js
 import React from "react";
 import { BeakerIcon, ArchiveBoxIcon } from "@heroicons/react/24/solid";
 
-import styles from "./card.module.css"; // Import CSS module for styling
+import styles from "./card.module.css";
 
-export default function Card() {
+export default function Card({ areaDesc, tag, rgUnitListCount }) {
+  const boxCount = Math.min(rgUnitListCount, 16);
   return (
     <div className={styles.card}>
       <section>
@@ -29,9 +29,9 @@ export default function Card() {
       </section>
       <section>
         <div className={styles.coreBar}>
-          <div className={styles.greenBox} />
-          <div className={styles.greenBox} />
-          <div className={styles.greenBox} />
+          {Array.from({ length: boxCount }).map((_, index) => (
+            <div key={index} className={styles.greenBox} />
+          ))}
         </div>
       </section>
     </div>
