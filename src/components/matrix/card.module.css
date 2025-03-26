@@ -1,0 +1,79 @@
+/* Card.module.css */
+.box {
+  width: 100%;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Added gap to space the cards */
+  overflow-x: auto; /* Enables horizontal scroll when needed */
+  padding: 10px;
+}
+
+.card {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+
+  /* Ensure card takes up space based on flex properties */
+  flex: 0 1 auto;  /* Don't grow, but allow shrinking and auto width based on content */
+
+  max-width: 400px;  /* Maximum width for cards */
+  min-width: 300px;  /* Minimum width for cards */
+  width: 100%;       /* Ensure width respects the flex constraints */
+
+  box-sizing: border-box; /* Include padding/borders in width/height */
+}
+
+/* Card Header Styles */
+.cardHeader {
+  display: flex;
+  justify-content: space-between; /* Distribute space between left and right sections */
+  align-items: center; /* Vertically align the content */
+  padding: 10px; /* Padding around the header */
+}
+
+.leftSide {
+  display: flex;
+  align-items: center; /* Vertically align icon and title */
+  gap: 8px; /* Space between icon and title */
+}
+
+.cardTitle {
+  font-size: 16px; /* Adjust title font size */
+  white-space: nowrap; /* Prevent title from wrapping */
+}
+
+.rightSide {
+  display: flex;
+  gap: 8px; /* Space between icons */
+  align-items: center; /* Vertically align icons */
+  justify-content: flex-end; /* Push icons to the right side */
+  width: auto; /* Allow the right side to shrink and not take more space than necessary */
+}
+
+/* Other Styles (icons, secondary info, etc.) */
+.icons {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.secondaryInfo {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.coreBar {
+  display: flex;
+  flex-wrap: wrap; /* Make sure the green boxes wrap to the next line */
+  gap: 5px; /* Space between green boxes */
+  margin-top: 10px;
+}
+
+.greenBox {
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  border-radius: 3px;
+  flex: 0 1 20px; /* This allows the green boxes to wrap and respect the container's width */
+}
