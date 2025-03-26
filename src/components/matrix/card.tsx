@@ -7,31 +7,33 @@ import styles from "./card.module.css"; // Import CSS module for styling
 export default function Card() {
   return (
     <div className={styles.card}>
-      <div className={styles.cardHeader}>
-        {/* Left side: Icon + Title */}
-        <div className={styles.leftSide}>
-          <BeakerIcon />
-          {/* Left Icon */}
-          <span className={styles.cardTitle}>Card Title</span> {/* Title */}
-        </div>
+      <section>
+        <div className={styles.cardHeader}>
+          <div className={styles.leftSide}>
+            {tag}
+            <span className={styles.cardTitle}>{areaDesc}</span>
+          </div>
 
-        {/* Right side: Icons */}
-        <div className={styles.rightSide}>
-          <BeakerIcon />
-          <ArchiveBoxIcon />
-          <BeakerIcon />
-          <ArchiveBoxIcon />
-          <BeakerIcon />
-          <ArchiveBoxIcon />
+          <div className={styles.rightSide}>
+            <BeakerIcon />
+            <ArchiveBoxIcon />
+            <BeakerIcon />
+            <ArchiveBoxIcon />
+            <BeakerIcon />
+            <ArchiveBoxIcon />
+          </div>
         </div>
-      </div>
-
-      <div className={styles.secondaryInfo}>Secondary Information</div>
-      <div className={styles.coreBar}>
-        <div className={styles.greenBox} />
-        <div className={styles.greenBox} />
-        <div className={styles.greenBox} />
-      </div>
+      </section>
+      <section>
+        <div className={styles.secondaryInfo}>Secondary Information</div>
+      </section>
+      <section>
+        <div className={styles.coreBar}>
+          <div className={styles.greenBox} />
+          <div className={styles.greenBox} />
+          <div className={styles.greenBox} />
+        </div>
+      </section>
     </div>
   );
 }
